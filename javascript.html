@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nikki Schools | Excellence in Education</title>
+
+    <link rel="stylesheet" href="style.css">
+<style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #ffffff;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #123c88;
+    color: white;
+
+    border-radius: 8px;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo h2 {
+    color: #123c88;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #123c88;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(8, 38, 88, 0.85),
+            rgba(8, 38, 88, 0.85)
+        ),
+        url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.welcome {
+    color: #ffd43b;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.15;
+    max-width: 800px;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #ffd43b;
+    display: block;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 18px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+
+    background: #123c88;
+    color: white;
+
+    padding: 13px 25px;
+
+    border: none;
+    border-radius: 5px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #0b2a61;
+}
+
+.secondary-btn {
+    background: #ffd43b;
+    color: #222;
+}
+
+.secondary-btn:hover {
+    background: #e5bb22;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section {
+    padding: 90px 5%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #123c88;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #123c88;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+}
+
+.about-card {
+    background: #f2f6fc;
+    padding: 35px;
+    border-radius: 12px;
+    border-left: 6px solid #123c88;
+}
+
+.about-card h3 {
+    color: #123c88;
+    margin-bottom: 8px;
+}
+
+.about-card p {
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   PROGRAMS
+========================= */
+
+.programs {
+    background: #f7f9fc;
+}
+
+.program-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.program-card {
+    background: white;
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.program-card:hover {
+    transform: translateY(-8px);
+}
+
+.icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.program-card h3 {
+    color: #123c88;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.feature-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.feature {
+    padding: 25px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.feature h3 {
+    color: #123c88;
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   ADMISSIONS
+========================= */
+
+.admissions {
+    background: #123c88;
+    color: white;
+    text-align: center;
+}
+
+.admission-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.admission-content h2 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.admission-content p:first-child {
+    color: #ffd43b;
+    font-weight: bold;
+}
+
+.white-btn {
+    background: white;
+    color: #123c88;
+    margin-top: 20px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info h3 {
+    font-size: 28px;
+    color: #123c88;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #123c88;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #071d42;
+    color: white;
+    padding: 60px 5% 20px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-content h2,
+.footer-content h3 {
+    margin-bottom: 15px;
+}
+
+.footer-content a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.footer-content a:hover {
+    color: #ffd43b;
+}
+
+.copyright {
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 78px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        flex-direction: column;
+        text-align: center;
+
+        padding: 25px;
+
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .about-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .program-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .program-container,
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+}</style></head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <span>N</span>
+                <h2>Nikki Schools</h2>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#admissions">Admissions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="welcome">WELCOME TO NIKKI SCHOOLS</p>
+
+            <h1>
+                Building Bright Minds,
+                <span>Creating Future Leaders</span>
+            </h1>
+
+            <p>
+                We provide quality education in a safe, supportive and
+                inspiring environment where every student can discover
+                their potential.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#admissions" class="btn">Apply Now</a>
+                <a href="#about" class="btn secondary-btn">Learn More</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <div class="section-title">
+            <p>ABOUT US</p>
+            <h2>Welcome to Nikki Schools</h2>
+        </div>
+
+        <div class="about-container">
+
+            <div class="about-text">
+
+                <h3>Education for a Better Future</h3>
+
+                <p>
+                    Nikki Schools is committed to providing quality education
+                    that develops students academically, socially and morally.
+                    Our goal is to prepare learners for success in school,
+                    career and life.
+                </p>
+
+                <p>
+                    We combine experienced teachers, modern learning methods
+                    and extracurricular activities to create a balanced
+                    educational experience.
+                </p>
+
+                <a href="#contact" class="btn">Contact Us</a>
+
+            </div>
+
+            <div class="about-card">
+                <h3>Our Vision</h3>
+                <p>
+                    To become a leading educational institution known for
+                    academic excellence, character development and innovation.
+                </p>
+
+                <h3>Our Mission</h3>
+                <p>
+                    To provide students with quality education, practical
+                    skills and values that prepare them for the future.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Programs -->
+    <section class="programs" id="programs">
+
+        <div class="section-title">
+            <p>WHAT WE OFFER</p>
+            <h2>Our Programs</h2>
+        </div>
+
+        <div class="program-container">
+
+            <div class="program-card">
+                <div class="icon">📚</div>
+                <h3>Primary Education</h3>
+                <p>
+                    Strong academic foundations through engaging and
+                    child-friendly learning.
+                </p>
+            </div>
+
+            <div class="program-card">
+                <div class="icon">🎓</div>
+                <h3>Secondary Education</h3>
+                <p>
+                    Comprehensive education designed to prepare students
+                    for higher education and careers.
+                </p>
+            </div>
+
+            <div class="program-card">
+                <div class="icon">💻</div>
+                <h3>ICT Education</h3>
+                <p>
+                    Practical computer and digital skills for the modern world.
+                </p>
+            </div>
+
+            <div class="program-card">
+                <div class="icon">⚽</div>
+                <h3>Sports & Activities</h3>
+                <p>
+                    Sports and extracurricular activities that develop
+                    teamwork, confidence and creativity.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Why Choose Us -->
+    <section class="features">
+
+        <div class="section-title">
+            <p>WHY NIKKI SCHOOLS</p>
+            <h2>Why Choose Us?</h2>
+        </div>
+
+        <div class="feature-container">
+
+            <div class="feature">
+                <h3>✓ Qualified Teachers</h3>
+                <p>
+                    Experienced and dedicated teachers focused on student success.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>✓ Modern Learning</h3>
+                <p>
+                    We use technology and modern teaching methods.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>✓ Safe Environment</h3>
+                <p>
+                    A secure and welcoming environment for every learner.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>✓ Character Development</h3>
+                <p>
+                    We develop responsible, confident and disciplined students.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Admissions -->
+    <section class="admissions" id="admissions">
+
+        <div class="admission-content">
+
+            <p>ADMISSIONS ARE OPEN</p>
+
+            <h2>Give Your Child the Best Start</h2>
+
+            <p>
+                Applications are now open for new students.
+                Join the Nikki Schools community today.
+            </p>
+
+            <a href="#contact" class="btn white-btn">Start Application</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+            <p>GET IN TOUCH</p>
+            <h2>Contact Nikki Schools</h2>
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <h3>Contact Information</h3>
+
+                <p>📍 Address: Lagos, Nigeria</p>
+                <p>📞 Phone: +234 800 000 0000</p>
+                <p>📧 Email: info@nikkischools.com</p>
+
+                <p>
+                    Our team is available to answer questions about admissions,
+                    programs and school activities.
+                </p>
+
+            </div>
+
+
+            <form id="contactForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Subject"
+                    required
+                >
+
+                <textarea
+                    id="message"
+                    rows="6"
+                    placeholder="Your Message"
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h2>Nikki Schools</h2>
+                <p>
+                    Excellence in education. Excellence in character.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#programs">Programs</a>
+                <a href="#admissions">Admissions</a>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>Lagos, Nigeria</p>
+                <p>+234 800 000 0000</p>
+                <p>info@nikkischools.com</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>
+                © <span id="year"></span> Nikki Schools. All Rights Reserved.
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+<script>// ============================
+// MOBILE NAVIGATION
+// ============================
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+
+    if (navLinks.classList.contains("active")) {
+        menuBtn.textContent = "✕";
+    } else {
+        menuBtn.textContent = "☰";
+    }
+});
+
+
+// Close menu after clicking a link
+
+const links = document.querySelectorAll(".nav-links a");
+
+links.forEach(function (link) {
+    link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+        menuBtn.textContent = "☰";
+    });
+});
+
+
+// ============================
+// CONTACT FORM
+// ============================
+
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+
+    alert(
+        "Thank you, " + name +
+        "! Your message has been received by Nikki Schools."
+    );
+
+    contactForm.reset();
+});
+
+
+// ============================
+// CURRENT YEAR
+// ============================
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();</script></body>
+</html>
